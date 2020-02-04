@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: cornflowerblue;
+}
+
+.menu-body {
+  display: flex;
+  justify-content: center;
+}
+
+.menu-button {
+  border: none;
+  background-color: cornflowerblue;
+  color: white;
+  height: 2em;
+  padding: 0.3em;
+  border-radius: 0.2em;
+  transition: 1s;
+  &:hover {
+    transition: 1s;
+    background-color: rgb(153, 189, 255);
+  }
+}
+
+.menu {
+  background-color: cornflowerblue;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  ul {
+    list-style: none;
+    display: flex;
+  }
+  li {
+    margin: 1em;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    &:hover {
+      color: #eee
+    }
+  }
+}
+
