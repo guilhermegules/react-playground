@@ -7,7 +7,7 @@ import "./index.css";
 const LoadingContext = React.createContext({
   loading: false,
   message: null,
-  showLoading: message => {},
+  showLoading: () => {},
   hideLoading: () => {}
 });
 
