@@ -26,13 +26,13 @@ const App = () => {
   return (
     <div className="App">
       <form
-        onSubmit={e => {
-          e.preventDefault();
+        onSubmit={event => {
+          event.preventDefault();
           dispatch({ type: "ADD_TODO", text });
           setText("");
         }}
       >
-        <input value={text} onChange={e => setText(e.target.value)} />
+        <input value={text} onChange={event => setText(event.target.value)} />
       </form>
       {todos.map((item, index) => (
         <div
