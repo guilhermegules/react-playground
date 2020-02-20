@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import { getDepartments } from "../services/api";
 
 class Departments extends Component {
@@ -12,11 +11,10 @@ class Departments extends Component {
 
     showLoading("Carregando departamentos");
 
-    const response = await getDepartments().then(response => {
+    await getDepartments().then(response => {
       hideLoading();
       return response;
     });
-    console.log({ response });
   };
 
   render() {

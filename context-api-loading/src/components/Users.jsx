@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import { getUsers } from "../services/api";
 
 class Users extends Component {
@@ -12,11 +11,10 @@ class Users extends Component {
 
     showLoading("Carregando usuários");
 
-    const response = await getUsers().then(response => {
+    await getUsers().then(response => {
       hideLoading();
       return response;
     });
-    console.log({ response });
   };
 
   render() {

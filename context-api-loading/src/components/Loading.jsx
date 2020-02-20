@@ -1,5 +1,4 @@
 import React from "react"
-
 import Spinner from "react-spinkit"
 
 const Loading = ({ loading, message}) => {
