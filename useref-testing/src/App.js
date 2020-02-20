@@ -1,8 +1,7 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useRef, useState } from "react";
-import useOutsideClick from "./useOutsideClick";
+import useOutsideClick from "./UseOutsideClick";
 import "./style.scss";
-import Theme from "./components/themed";
+import FocusInput from "./components/FocusInput";
 function App() {
   const [show, setState] = useState(false);
   const ref = useRef();
@@ -12,30 +11,27 @@ function App() {
   });
 
   return (
-    <div className="App">
-      <button className="menu-button" onClick={() => setState(!show)}>|||
-      </button>
-      {show && (
-        <div className="menu-body">
-          <div className="menu" ref={ref}>
-            <ul>
-              <li>
-                <a href="#">Home</a>
-              </li>
-              <li>
-                <a href="#">Products</a>
-              </li>
-              <li>
-                <a href="#">About us</a>
-              </li>
-            </ul>
-            <small>(Click ouside to close)</small>
+    <React.StrictMode>
+      <div className="App">
+        <button className="menu-button" onClick={() => setState(!show)}>
+          |||
+        </button>
+        {show && (
+          <div className="menu-body">
+            <div className="menu" ref={ref}>
+              <ul>
+                <li>Home</li>
+                <li>Product</li>
+                <li>About us</li>
+              </ul>
+              <small>(Click ouside to close)</small>
+            </div>
           </div>
-        </div>
-      )}
-      <div>This is content outside the menu</div>
-      <Theme/>
-    </div>
+        )}
+        <div>This is content outside the menu</div>
+        <FocusInput/>
+      </div>
+    </React.StrictMode>
   );
 }
 

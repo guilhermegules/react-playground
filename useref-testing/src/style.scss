@@ -39,13 +39,23 @@
   }
   li {
     margin: 1em;
-  }
-  a {
-    color: white;
-    text-decoration: none;
+    cursor: pointer;
     &:hover {
-      color: #eee
+      color: #eee;
     }
   }
 }
 
+.wrapper {
+  margin: 1em;
+  input {
+    color: #666;
+    border: 1px solid #ccc;
+    outline: none;
+    margin: 1em;
+    &.active {
+      color: #000;
+      border-color: #000;
+    }
+  }
+}
