@@ -1,2 +1,3 @@
-# React_Playground
+# React Playground
+
 React training repository
