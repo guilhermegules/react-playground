@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Tomate",
+    "picture": "tomate",
+    "value": 4.80,
+    "id": "1"
+  },
+  {
+    "name": "Brócolis",
+    "picture": "brocolis",
+    "value": 2.50,
+    "id": "2"
+  },
+  {
+    "name": "Batata",
+    "picture": "batata",
+    "value": 3.60,
+    "id": "3"
+  },
+  {
+    "name": "Pepino",
+    "picture": "pepino",
+    "value": 1.80,
+    "id": "4"
+  },
+  {
+    "name": "Abóbora",
+    "picture": "abobora",
+    "value": 5,
+    "id": "5"
+  }
+]
