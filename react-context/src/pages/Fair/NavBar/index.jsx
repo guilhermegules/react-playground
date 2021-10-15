@@ -1,18 +1,16 @@
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import IconButton from '@material-ui/core/IconButton';
-import Badge from '@material-ui/core/Badge';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
+import IconButton from '@material-ui/core/IconButton'
+import Badge from '@material-ui/core/Badge'
 
-import { Nav } from './styles';
-import { ReactComponent as Logo } from 'assets/logo.svg';
+import { ReactComponent as Logo } from 'assets/logo.svg'
+import Nav from './styles'
 
 export default function NavBar() {
   return (
     <Nav>
       <Logo />
       <IconButton>
-        <Badge
-          color="primary"
-        >
+        <Badge color="primary">
           <ShoppingCartIcon />
         </Badge>
       </IconButton>
