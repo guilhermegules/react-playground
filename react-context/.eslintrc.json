@@ -23,6 +23,7 @@
     "react/prop-types": "off",
     "react/jsx-props-no-spreading": "off",
     "import/no-unresolved": "off",
-    "no-param-reassign": "off"
+    "no-param-reassign": "off",
+    "no-unused-expressions": "off"
   }
 }
