@@ -4,6 +4,7 @@ import Cart from 'pages/Cart'
 import Fair from 'pages/Fair'
 import Login from 'pages/Login'
 import { UserProvider } from 'common/context/User'
+import { CartProvider } from 'common/context/Cart'
 
 function Router() {
   return (
@@ -13,9 +14,11 @@ function Router() {
           <Route exact path="/">
             <Login />
           </Route>
-          <Route path="/fair">
-            <Fair />
-          </Route>
+          <CartProvider>
+            <Route path="/fair">
+              <Fair />
+            </Route>
+          </CartProvider>
         </UserProvider>
         <Route path="/cart">
           <Cart />
