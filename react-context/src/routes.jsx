@@ -5,6 +5,7 @@ import Fair from 'pages/Fair'
 import Login from 'pages/Login'
 import { UserProvider } from 'common/context/User'
 import { CartProvider } from 'common/context/Cart'
+import { PaymentProvider } from 'common/context/Payment'
 
 function Router() {
   return (
@@ -15,14 +16,16 @@ function Router() {
             <Login />
           </Route>
           <CartProvider>
-            <Route path="/fair">
-              <Fair />
-            </Route>
+            <PaymentProvider>
+              <Route path="/fair">
+                <Fair />
+              </Route>
+              <Route path="/cart">
+                <Cart />
+              </Route>
+            </PaymentProvider>
           </CartProvider>
         </UserProvider>
-        <Route path="/cart">
-          <Cart />
-        </Route>
       </Switch>
     </BrowserRouter>
   )

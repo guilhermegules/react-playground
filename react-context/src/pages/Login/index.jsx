@@ -32,6 +32,7 @@ function Login() {
       <Button
         variant="contained"
         color="primary"
+        disabled={name.length < 2}
         onClick={() => history.push('/fair')}
       >
         Avançar
