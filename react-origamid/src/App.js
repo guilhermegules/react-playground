@@ -4,6 +4,8 @@ import ProductEffectExercise from "./useEffect/ProductEffectExercise";
 import ProductStateExercise from "./useState/ProductStateExercise";
 import ClientsExercise from "./useState/ClientsExercise";
 import ScrollEffect from "./useEffect/ScrollEffect";
+import Comments from "./useRef/Comments";
+import SetTimeout from "./useRef/SetTimeout";
 
 function App() {
   return (
@@ -19,6 +21,11 @@ function App() {
       <ProductEffectExercise />
       <hr />
       <ScrollEffect />
+      <hr />
+      <h2>Use ref test</h2>
+      <Comments />
+      <hr />
+      <SetTimeout />
     </div>
   );
 }
