@@ -18,7 +18,7 @@ const SetTimeout = () => {
       setNotification(null);
     }, 2000);
 
-    // With this we can remove the previous set timeout
+    // With this we can't remove the previous set timeout
     setTimeout(() => {
       setNotificationWithError(null);
     }, 2000);
