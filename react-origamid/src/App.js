@@ -9,6 +9,8 @@ import SetTimeout from "./useRef/SetTimeout";
 import Counter from "./useMemo/Counter";
 import SlowOperation from "./useMemo/SlowOperation";
 import UseCallback from "./useCallback/UseCallback";
+import { ProductProvider } from "./context/ProductContext";
+import ProductsContextExample from "./context/ProductsContextExample";
 
 function App() {
   return (
@@ -37,6 +39,12 @@ function App() {
       <hr />
       <h2>Use callback test</h2>
       <UseCallback />
+      <hr />
+      <h2>Use Context exercise</h2>
+
+      <ProductProvider>
+        <ProductsContextExample />
+      </ProductProvider>
     </div>
   );
 }
