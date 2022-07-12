@@ -1,10 +1,9 @@
 import React from "react";
 import { FieldValues, useFormContext } from "react-hook-form";
-import { useTodo } from "../hooks/useTodo";
 
-interface ITodoFormProps {}
+import { useTodo } from "@hooks/useTodo";
 
-const TodoForm: React.FunctionComponent<ITodoFormProps> = (props) => {
+const TodoForm: React.FC = () => {
   const {
     register,
     handleSubmit,

@@ -1,11 +1,10 @@
 import React from "react";
-import { useTodo } from "../hooks/useTodo";
+
 import TodoItem from "./TodoItem";
 import TodoForm from "./TodoForm";
+import { useTodo } from "@hooks/useTodo";
 
-interface ITodoListProps {}
-
-const TodoList: React.FC<ITodoListProps> = (props) => {
+const TodoList: React.FC = () => {
   const { todos } = useTodo();
 
   return (

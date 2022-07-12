@@ -1,7 +1,7 @@
-import React, { useEffect, useMemo } from "react";
-import { useTodo } from "../hooks/useTodo";
+import React, { useMemo } from "react";
 
-import { Todo } from "../interfaces/todo.interface";
+import { useTodo } from "@hooks/useTodo";
+import { Todo } from "@interfaces/todo.interface";
 
 interface ITodoProps {
   todo: Todo;
