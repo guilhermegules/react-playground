@@ -19,10 +19,13 @@ const TodoForm: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <input {...register("todo", { required: true })} />
+    <form onSubmit={handleSubmit(onSubmit)} className="container">
+      <input
+        className="form-control"
+        {...register("todo", { required: true })}
+      />
       {errors.todo && <span>This field is required</span>}
-      <button>Add task</button>
+      <button className="btn btn-primary mt-2">Add task</button>
     </form>
   );
 };
