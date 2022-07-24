@@ -7,7 +7,7 @@ const Nav: React.FC = () => {
   return (
     <nav className="nav">
       <Link to="/">Todo List</Link>
-      <Link to="/form">Form</Link>
+      <Link to="/curriculum">Curriculum</Link>
     </nav>
   );
 };

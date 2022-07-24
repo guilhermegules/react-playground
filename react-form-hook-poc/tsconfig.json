@@ -19,7 +19,8 @@
     "paths": {
       "@components/*": ["./src/components/*"],
       "@hooks/*": ["./src/hooks/*"],
-      "@interfaces/*": ["./src/interfaces/*"]
+      "@interfaces/*": ["./src/interfaces/*"],
+      "@enums/*": ["./src/enums/*"]
     }
   },
   "include": ["src"],

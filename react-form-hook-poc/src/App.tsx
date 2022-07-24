@@ -1,6 +1,8 @@
-import Nav from "@components/Nav";
-import { TodoProvider } from "@hooks/useTodo";
 import { FormProvider, useForm } from "react-hook-form";
+
+import Nav from "@components/Nav";
+import { CurriculumProvider } from "@hooks/useCurriculum";
+import { TodoProvider } from "@hooks/useTodo";
 import CustomRoutes from "./routes";
 
 const App = () => {
@@ -8,10 +10,12 @@ const App = () => {
 
   return (
     <TodoProvider>
-      <FormProvider {...methods}>
-        <Nav />
-        <CustomRoutes />
-      </FormProvider>
+      <CurriculumProvider>
+        <FormProvider {...methods}>
+          <Nav />
+          <CustomRoutes />
+        </FormProvider>
+      </CurriculumProvider>
     </TodoProvider>
   );
 };
