@@ -20,7 +20,8 @@
       "@components/*": ["./src/components/*"],
       "@hooks/*": ["./src/hooks/*"],
       "@interfaces/*": ["./src/interfaces/*"],
-      "@enums/*": ["./src/enums/*"]
+      "@enums/*": ["./src/enums/*"],
+      "@utils/*": ["./src/utils/*"]
     }
   },
   "include": ["src"],

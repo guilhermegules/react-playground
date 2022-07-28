@@ -4,6 +4,7 @@ import { FieldValues, useFieldArray, useFormContext } from "react-hook-form";
 import { CurriculumFormControl } from "@enums/curriculum.enum";
 import { useCurriculum } from "@hooks/useCurriculum";
 import { Curriculum } from "@interfaces/curriculum.interface";
+import { errorMessageFormatter } from "@utils/form.validations";
 
 const CurriculumForm = () => {
   const {
@@ -11,10 +12,11 @@ const CurriculumForm = () => {
     handleSubmit,
     control,
     reset,
-    formState: { isValid },
+    formState: { isValid, errors },
   } = useFormContext();
   const { fields, append } = useFieldArray({ control, name: "experiences" });
   const { setCurriculums } = useCurriculum();
+  const [showAlert, setShowAlert] = React.useState(false);
 
   const addExperience = () => {
     append("");
@@ -27,18 +29,35 @@ const CurriculumForm = () => {
       curriculum,
     ]);
     reset();
+    append("", { shouldFocus: false });
+    setShowAlert(true);
+
+    setTimeout(() => {
+      setShowAlert(false);
+    }, 10000);
   };
 
   React.useEffect(() => {
     append("", { shouldFocus: false });
   }, []);
 
-  React.useEffect(() => {
-    console.log(isValid);
-  }, [isValid]);
-
   return (
     <form className="container" onSubmit={handleSubmit(onSubmit)}>
+      {showAlert && (
+        <div
+          className="alert alert-success alert-dismissible fade show"
+          role="alert"
+        >
+          Curriculum saved!
+          <button
+            type="button"
+            className="btn-close"
+            data-bs-dismiss="alert"
+            aria-label="Close"
+          ></button>
+        </div>
+      )}
+
       <div className="row">
         <div className="col">
           <label className="form-label" htmlFor={CurriculumFormControl.NAME}>
@@ -49,6 +68,8 @@ const CurriculumForm = () => {
             type="text"
             {...register(CurriculumFormControl.NAME, { required: true })}
           />
+          {errors.name &&
+            errorMessageFormatter(errors.name.type as unknown as string)}
         </div>
         <div className="col">
           <label

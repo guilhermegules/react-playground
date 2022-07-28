@@ -1,7 +1,17 @@
-import React from "react";
+import { useCurriculum } from "@hooks/useCurriculum";
 
 const CurriculumList = () => {
-  return <div>CurriculumList</div>;
+  const { curriculums } = useCurriculum();
+
+  return (
+    <section>
+      <ul>
+        {curriculums.map((curriculum) => (
+          <li>{curriculum.name}</li>
+        ))}
+      </ul>
+    </section>
+  );
 };
 
 export default CurriculumList;
