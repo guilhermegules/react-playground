@@ -68,8 +68,11 @@ const CurriculumForm = () => {
             type="text"
             {...register(CurriculumFormControl.NAME, { required: true })}
           />
-          {errors.name &&
-            errorMessageFormatter(errors.name.type as unknown as string)}
+          {errors.name && (
+            <p style={{ color: "red" }}>
+              {errorMessageFormatter(errors.name.type as unknown as string)}
+            </p>
+          )}
         </div>
         <div className="col">
           <label
@@ -83,6 +86,11 @@ const CurriculumForm = () => {
             type="text"
             {...register(CurriculumFormControl.LAST_NAME, { required: true })}
           />
+          {errors.lastName && (
+            <p style={{ color: "red" }}>
+              {errorMessageFormatter(errors.lastName.type as unknown as string)}
+            </p>
+          )}
         </div>
       </div>
       <div className="row mt-2">
@@ -98,6 +106,13 @@ const CurriculumForm = () => {
             type="date"
             {...register(CurriculumFormControl.BIRTH_DATE, { required: true })}
           />
+          {errors.birthDate && (
+            <p style={{ color: "red" }}>
+              {errorMessageFormatter(
+                errors.birthDate.type as unknown as string
+              )}
+            </p>
+          )}
         </div>
         <div className="col">
           <label className="form-label" htmlFor={CurriculumFormControl.EMAIL}>
@@ -108,6 +123,11 @@ const CurriculumForm = () => {
             type="email"
             {...register(CurriculumFormControl.EMAIL, { required: true })}
           />
+          {errors.email && (
+            <p style={{ color: "red" }}>
+              {errorMessageFormatter(errors.email.type as unknown as string)}
+            </p>
+          )}
         </div>
       </div>
       <div className="row mt-2">
@@ -120,6 +140,11 @@ const CurriculumForm = () => {
             type="text"
             {...register(CurriculumFormControl.CPF, { required: true })}
           />
+          {errors.cpf && (
+            <p style={{ color: "red" }}>
+              {errorMessageFormatter(errors.cpf.type as unknown as string)}
+            </p>
+          )}
         </div>
         <div className="col">
           <label
@@ -133,6 +158,13 @@ const CurriculumForm = () => {
             type="text"
             {...register(CurriculumFormControl.CELLPHONE, { required: true })}
           />
+          {errors.cellphone && (
+            <p style={{ color: "red" }}>
+              {errorMessageFormatter(
+                errors.cellphone.type as unknown as string
+              )}
+            </p>
+          )}
         </div>
       </div>
       <div className="row mt-2">
