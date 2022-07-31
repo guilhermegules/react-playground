@@ -1,5 +1,6 @@
 import React from "react";
 import { FieldValues, useFieldArray, useFormContext } from "react-hook-form";
+import InputMask from "react-input-mask";
 
 import { CurriculumFormControl } from "@enums/curriculum.enum";
 import { useCurriculum } from "@hooks/useCurriculum";
@@ -23,10 +24,14 @@ const CurriculumForm = () => {
   };
 
   const onSubmit = (formData: FieldValues) => {
-    const curriculum = formData as Curriculum;
     setCurriculums((previousCurriculums) => [
       ...previousCurriculums,
-      curriculum,
+      {
+        ...formData,
+        experiences: formData.experiences.map(
+          (experience: { value: string }) => experience.value
+        ),
+      } as Curriculum,
     ]);
     reset();
     append("", { shouldFocus: false });
@@ -38,7 +43,9 @@ const CurriculumForm = () => {
   };
 
   React.useEffect(() => {
-    append("", { shouldFocus: false });
+    if (fields.length === 0) {
+      append("", { shouldFocus: false });
+    }
   }, []);
 
   return (
@@ -135,9 +142,10 @@ const CurriculumForm = () => {
           <label className="form-label" htmlFor={CurriculumFormControl.CPF}>
             CPF
           </label>
-          <input
+          <InputMask
             className="form-control"
             type="text"
+            mask="999.999.999-99"
             {...register(CurriculumFormControl.CPF, { required: true })}
           />
           {errors.cpf && (
@@ -153,9 +161,10 @@ const CurriculumForm = () => {
           >
             Telefone
           </label>
-          <input
+          <InputMask
             className="form-control"
             type="text"
+            mask="(99) 99 99999-9999"
             {...register(CurriculumFormControl.CELLPHONE, { required: true })}
           />
           {errors.cellphone && (
