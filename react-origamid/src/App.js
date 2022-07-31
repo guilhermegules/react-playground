@@ -11,6 +11,8 @@ import SlowOperation from "./useMemo/SlowOperation";
 import UseCallback from "./useCallback/UseCallback";
 import { ProductProvider } from "./context/ProductContext";
 import ProductsContextExample from "./context/ProductsContextExample";
+import LocalStorage from "./customHooks/LocalStorage";
+import FetchComponent from "./customHooks/FetchComponent";
 
 function App() {
   return (
@@ -45,6 +47,18 @@ function App() {
       <ProductProvider>
         <ProductsContextExample />
       </ProductProvider>
+
+      <hr />
+
+      <h2>Use local storage hook</h2>
+
+      <LocalStorage />
+
+      <hr />
+
+      <h2>Use Fetch Hook</h2>
+
+      <FetchComponent />
     </div>
   );
 }
