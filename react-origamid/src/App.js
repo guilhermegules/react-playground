@@ -13,6 +13,7 @@ import { ProductProvider } from "./context/ProductContext";
 import ProductsContextExample from "./context/ProductsContextExample";
 import LocalStorage from "./customHooks/LocalStorage";
 import FetchComponent from "./customHooks/FetchComponent";
+import Form from "./forms/Form";
 
 function App() {
   return (
@@ -59,6 +60,12 @@ function App() {
       <h2>Use Fetch Hook</h2>
 
       <FetchComponent />
+
+      <hr />
+
+      <h2>Forms</h2>
+
+      <Form />
     </div>
   );
 }
