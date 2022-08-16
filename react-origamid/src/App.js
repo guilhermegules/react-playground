@@ -14,6 +14,7 @@ import ProductsContextExample from "./context/ProductsContextExample";
 import LocalStorage from "./customHooks/LocalStorage";
 import FetchComponent from "./customHooks/FetchComponent";
 import Form from "./forms/Form";
+import UseFormComponent from "./customHooks/UseFormComponent";
 
 function App() {
   return (
@@ -66,6 +67,10 @@ function App() {
       <h2>Forms</h2>
 
       <Form />
+
+      <hr />
+
+      <UseFormComponent />
     </div>
   );
 }
