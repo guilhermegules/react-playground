@@ -15,10 +15,22 @@ import LocalStorage from "./customHooks/LocalStorage";
 import FetchComponent from "./customHooks/FetchComponent";
 import Form from "./forms/Form";
 import UseFormComponent from "./customHooks/UseFormComponent";
+import ProductAnimation from "./animations/ProductAnimation";
+import SlideContainer from "./animations/SlideContainer";
 
 function App() {
   return (
     <div>
+      <h2>Animations</h2>
+
+      <ProductAnimation />
+
+      <hr />
+
+      <SlideContainer />
+
+      <hr />
+
       <ClientsExercise />
       <hr />
       <ProductsExercise />
