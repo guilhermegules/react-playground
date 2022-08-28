@@ -1,0 +1,12 @@
+.nav-item {
+  background-color: rgb(189, 189, 189);
+  color: #000;
+  padding: 10px;
+  border-radius: 8px;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.active {
+  background-color: grey;
+}

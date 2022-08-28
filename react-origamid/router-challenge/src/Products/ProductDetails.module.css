@@ -1,0 +1,27 @@
+.content {
+  display: flex;
+  margin-top: 30px;
+}
+
+.imagesContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.image {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.infoContainer {
+  padding: 0 30px;
+}
+
+.price {
+  background-color: greenyellow;
+  padding: 8px;
+  color: rgb(94, 141, 24);
+  border-radius: 8px;
+  width: fit-content;
+}

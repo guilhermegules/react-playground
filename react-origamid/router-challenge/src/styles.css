@@ -1,0 +1,21 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 30px 80px;
+}
+
+.loading {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-top: 30px;
+  border: 10px solid #ccc;
+  border-right-color: transparent;
+  animation: loading 1s infinite;
+}
+
+@keyframes loading {
+  to {
+    transform: rotate(360deg);
+  }
+}
