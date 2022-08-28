@@ -17,6 +17,9 @@ import Form from "./forms/Form";
 import UseFormComponent from "./customHooks/UseFormComponent";
 import ProductAnimation from "./animations/ProductAnimation";
 import SlideContainer from "./animations/SlideContainer";
+import Button from "./propTypes/Button";
+import Container from "./lazy-suspense/Container";
+import HeaderContainer from "./memo/HeaderContainer";
 
 function App() {
   return (
@@ -83,6 +86,18 @@ function App() {
       <hr />
 
       <UseFormComponent />
+
+      <h2>Prop types</h2>
+
+      <Button width={200}>Click</Button>
+
+      <h2>Lazy and Suspense</h2>
+
+      <Container />
+
+      <h2>Memo</h2>
+
+      <HeaderContainer />
     </div>
   );
 }
