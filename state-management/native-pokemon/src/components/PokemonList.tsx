@@ -5,7 +5,7 @@ const PokemonList = () => {
   const { pokemons } = usePokemon();
 
   return (
-    <ul className="grid grid-cols-1 gap-66 sm:grid-cols-2 lg:grid-cols-3 mt-3">
+    <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-3">
       {pokemons.map((pokemon) => (
         <PokemonCard key={pokemon.id} pokemon={pokemon} />
       ))}
