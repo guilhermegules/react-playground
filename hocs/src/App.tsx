@@ -8,7 +8,9 @@ const App = withLog(() => {
     <div className="app">
       <Title>React HOCs</Title>
       <code>Check the dev console</code>
-      <Gists />
+      <div>
+        <Gists />
+      </div>
     </div>
   );
 });
