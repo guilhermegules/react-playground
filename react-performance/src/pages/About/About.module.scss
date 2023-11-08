@@ -1,0 +1,32 @@
+.aboutUs {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.aboutUsText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: justify;
+  > p {
+    font-family: "Josefin Sans", sans-serif;
+  }
+}
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.image {
+  width: 600px;
+  img {
+    border-radius: 5px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,56 @@
+@import "../../../styles/variables";
+@import "../../../styles/breakpoints";
+
+.item {
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  transition: 0.2s ease-in;
+  width: 90%;
+  &:hover {
+    background-color: $grey;
+  }
+}
+
+.itemImage {
+  min-width: 240px;
+  @media (max-width: $desktop_xsm) {
+    width: 100%;
+  }
+  img {
+    border-radius: 8px;
+    width: 100%;
+  }
+}
+
+.itemTitle {
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  p {
+    color: $dark-grey;
+    font-size: 1.3rem;
+    font-weight: 600;
+    max-width: 600px;
+    margin-bottom: 20px;
+  }
+}
+
+.itemDescription {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 20px;
+  @media (max-width: $desktop_xsm) {
+    flex-direction: row;
+    margin-top: 20px;
+    padding: 0;
+  }
+}

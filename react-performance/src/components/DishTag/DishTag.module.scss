@@ -1,0 +1,85 @@
+@import "../../styles/variables";
+@import "../../styles/breakpoints";
+
+$pasta: #d73b3b;
+$meat: #30201e;
+$combos: #e6c864;
+$vegans: #80aa40;
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  max-width: 700px;
+
+  @media (max-width: $desktop_xsm) {
+    justify-content: flex-end;
+  }
+
+  @media (max-width: $mobile) {
+    justify-content: flex-start;
+  }
+
+  > div {
+    margin: 10px;
+  }
+}
+
+.tagsType {
+  align-items: center;
+  border-radius: 2px;
+  display: flex;
+  font-weight: bold;
+  height: 40px;
+  justify-content: center;
+  padding: 10px 30px;
+}
+
+.tagsPasta {
+  @extend .tagsType;
+  background-color: $pasta;
+  color: white;
+}
+
+.tagsMeat {
+  @extend .tagsType;
+  background-color: $meat;
+  color: white;
+}
+
+.tagsCombos {
+  @extend .tagsType;
+  background-color: $combos;
+}
+
+.tagsVegans {
+  @extend .tagsType;
+  background-color: $vegans;
+}
+
+.tagsPortion {
+  align-items: center;
+  display: flex;
+  font-size: 1.25rem;
+  font-weight: bold;
+  justify-content: center;
+}
+
+.tagsPersonQuantity {
+  align-items: center;
+  display: flex;
+  font-size: 1.25rem;
+  font-weight: bold;
+  justify-content: center;
+}
+
+.tagsValue {
+  align-items: center;
+  display: flex;
+  font-size: 1.25rem;
+  font-weight: bold;
+  justify-content: center;
+  color: $red;
+  font-size: 1.7rem;
+}
