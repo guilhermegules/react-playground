@@ -1,0 +1,29 @@
+nav {
+  background: var(--primary);
+  border-bottom: 10px solid var(--secondary);
+}
+
+nav a {
+  text-transform: uppercase;
+  color: var(--title);
+}
+
+nav a span {
+  font-weight: bold;
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px;
+}
+
+nav .sidenav-trigger {
+  margin: 0;
+}
+
+.menu-trigger {
+  cursor: pointer;
+}
