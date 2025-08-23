@@ -1,5 +1,9 @@
 # Food ninja PWA
 
+## Service Worker LifeCycle
+
+![](./docs/service-worker-lifecycle.png)
+
 ## Scripts
 
 ### Development
