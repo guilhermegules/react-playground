@@ -7,6 +7,17 @@ import { About } from "./pages/About.tsx";
 import { Contact } from "./pages/Contact.tsx";
 import { Home } from "./pages/Home.tsx";
 
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("/sw.js")
+    .then((registration) => {
+      console.log("service worker registered", registration);
+    })
+    .catch((err) => {
+      console.error("service worker not registered", err);
+    });
+}
+
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>

@@ -1,10 +1,12 @@
 import { Menu } from "antd";
+import { useNavigate } from "react-router";
 
 type SideNavProps = {
   isOpen: boolean;
 };
 
 export const SideNav = ({ isOpen }: SideNavProps) => {
+  const navigate = useNavigate();
   return (
     isOpen && (
       <Menu
@@ -17,17 +19,17 @@ export const SideNav = ({ isOpen }: SideNavProps) => {
           {
             key: "1",
             label: "Home",
-            onClick: () => {},
+            onClick: () => navigate("/"),
           },
           {
             key: "2",
             label: "About",
-            onClick: () => {},
+            onClick: () => navigate("/about"),
           },
           {
             key: "3",
             label: "Contact",
-            onClick: () => {},
+            onClick: () => navigate("/contact"),
           },
         ]}
       />

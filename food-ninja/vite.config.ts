@@ -1,3 +1,4 @@
+import { resolve } from "path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
@@ -7,9 +8,13 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: "index.html",
-        sw: "src/sw.ts"
-      }
-    }
-  }
+        main: resolve(__dirname, "index.html"),
+        sw: resolve(__dirname, "src/sw.ts"),
+      },
+      output: {
+        entryFileNames: (chunk) =>
+          chunk.name === "sw" ? "sw.js" : "[name].js",
+      },
+    },
+  },
 });
