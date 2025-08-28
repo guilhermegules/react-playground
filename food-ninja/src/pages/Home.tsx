@@ -4,7 +4,7 @@ import { PlusOutlined } from "@ant-design/icons";
 import { NewRecipeForm } from "../components/NewRecipeForm";
 import { useState } from "react";
 
-export const Home = () => {
+const Home = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
 
   const showForm = () => {
@@ -21,6 +21,9 @@ export const Home = () => {
 
   return (
     <>
+      <div style={{ padding: 24 }}>
+        <h2>Recipes</h2>
+      </div>
       <Recipes />
       <FloatButton onClick={showForm} icon={<PlusOutlined />} type="primary" />
       <Modal
@@ -35,3 +38,5 @@ export const Home = () => {
     </>
   );
 };
+
+export default Home;

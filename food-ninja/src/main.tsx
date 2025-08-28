@@ -1,11 +1,12 @@
-import { StrictMode } from "react";
+import { lazy, StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.tsx";
 import { BrowserRouter, Route, Routes } from "react-router";
-import { About } from "./pages/About.tsx";
-import { Contact } from "./pages/Contact.tsx";
-import { Home } from "./pages/Home.tsx";
+
+const About = lazy(() => import("./pages/About.tsx"));
+const Home = lazy(() => import("./pages/Home.tsx"));
+const Contact = lazy(() => import("./pages/Contact.tsx"));
 
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker
