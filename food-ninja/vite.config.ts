@@ -9,7 +9,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        sw: resolve(__dirname, "src/sw.ts"),
+        sw: resolve(__dirname, "src/sw.js"),
       },
       output: {
         entryFileNames: (chunk) =>
