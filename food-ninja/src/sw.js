@@ -7,6 +7,10 @@ const assets = [
   "/index.html",
   "/main.js",
   "/main-BnolW0BY.css",
+  "/offline.html",
+  "/assets/Home-8Mre_2Nl.js",
+  "/assets/main-BnolW0BY.css",
+  "/assets/OfflinePage-CpxWSig_.js",
 ];
 
 self.addEventListener("install", (event) => {
@@ -28,7 +32,7 @@ self.addEventListener("activate", (event) => {
 
       return Promise.all(
         keys
-          .filter((key) => key !== staticCacheName)
+          .filter((key) => key !== staticCacheName && key !== dynamicCacheName)
           .map((key) => caches.delete(key))
       );
     })
@@ -38,9 +42,18 @@ self.addEventListener("activate", (event) => {
 self.addEventListener("fetch", (event) => {
   // console.log("Fetch event", event);
   event.respondWith(
-    caches.match(event.request).then((cacheResponse) => {
-      return cacheResponse || addCacheFromFetch(event);
-    })
+    caches
+      .match(event.request)
+      .then((cacheResponse) => {
+        return cacheResponse || addCacheFromFetch(event);
+      })
+      .catch(() => {
+        if (event.request.mode === "navigate") {
+          return caches.match("/assets/OfflinePage-CpxWSig_.js");
+        }
+
+        return new Response(null);
+      })
   );
 });
 
