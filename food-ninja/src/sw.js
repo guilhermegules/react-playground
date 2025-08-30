@@ -13,6 +13,17 @@ const assets = [
   "/assets/OfflinePage-CpxWSig_.js",
 ];
 
+// Cache size limite
+const limitCacheSize = (name, size) => {
+  caches.open(name).then((cache) => {
+    cache.keys().then((keys) => {
+      if (keys.length > size) {
+        cache.delete(keys[0]).then(limitCacheSize(name, size));
+      }
+    });
+  });
+};
+
 self.addEventListener("install", (event) => {
   console.log("Service worker has been installed", event);
   // Will open or create the cache
@@ -61,6 +72,7 @@ function addCacheFromFetch(event) {
   return fetch(event.request).then((fetchResponse) => {
     return caches.open(dynamicCacheName).then((cache) => {
       cache.put(event.request.url, fetchResponse.clone());
+      limitCacheSize(dynamicCacheName, 3);
       return fetchResponse;
     });
   });
