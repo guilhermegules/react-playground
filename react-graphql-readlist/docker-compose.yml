@@ -1,0 +1,27 @@
+version: "3.7"
+
+services:
+  mongo: 
+    container_name: mongodb
+    image: mongo:4.2.6
+    ports: 
+      - 27017:27017
+  server: 
+    container_name: server
+    build: server
+    ports: 
+      - 4000:4000
+    links:
+      - mongo
+    depends_on: 
+      - mongo
+  client: 
+    container_name: client
+    build: client
+    ports: 
+      - 3000:3000
+    links: 
+      - server
+    depends_on: 
+      - server
+    stdin_open: true
