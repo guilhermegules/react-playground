@@ -1,0 +1,72 @@
+.advice-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--dark-grayish-blue);
+  height: 350px;
+  width: 500px;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.advice-card__advice-number {
+  color: var(--neon-green);
+  font-weight: 300;
+  text-align: center;
+}
+
+.advice-card__quote {
+  font-size: 28px;
+  color: var(--light-cyan);
+  text-align: center;
+}
+
+.advice-card__button {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--neon-green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: -35px;
+  left: 235px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.advice-card__button:hover {
+  filter: contrast(200%);
+  transition: 0.3s;
+  box-shadow: 0.5px 0.5px 0 2px var(--neon-green);
+}
+
+.advice-card__divider {
+  width: 100%;
+}
+
+.advice-card__divider::before {
+  height: 2px;
+  background-color: var(--grayish-glue);
+}
+
+.advice-card__divider::after {
+  height: 2px;
+  background-color: var(--grayish-glue);
+}
+
+@media screen and (max-width: 412px) {
+  .advice-card {
+    height: 300px;
+    width: 300px;
+  }
+
+  .advice-card__button {
+    bottom: -35px;
+    left: 135px;
+  }
+}
