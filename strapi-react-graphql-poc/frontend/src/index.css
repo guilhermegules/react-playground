@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --primary: #8e2ad6;
+  --background: #f1f1f1;
+  --gray: #777;
+}
+
+body {
+  margin: 0 30px;
+  font-family: "Poppins";
+  background: var(--background);
+}
+
+h1,h2,h3,h4 {
+  font-weight: 500;
+}
+
+.app {
+  font-size: 1.2em;
+  margin: 10px auto;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+  border-bottom: 1px dotted;
+}
+
+/* main header */
+
+.main-header p {
+  font-size: 1.5em;
+  color: var(--primary);
+  padding-bottom: 10px;
+  border-bottom: 2px solid;
+}
+
+.main-header .categories {
+  text-align: right;
+}
+
+.main-header .categories a {
+  margin-left: 8px;
+}
+
+/* Review list home */
+
+.review-card {
+  background: white;
+  margin: 60px auto;
+  padding: 1px 20px 20px 90px;
+  position: relative;
+}
+
+.review-card .rating {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  background: var(--primary);
+  font-size: 3em;
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  color: white;
+}
+
+.review-card h2 {
+  margin-bottom: 0;
+}
+
+.review-card small {
+  margin-right: 10px;
+  color: var(--gray);
+}
